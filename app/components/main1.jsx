@@ -23,7 +23,7 @@ export default function Main1() {
         playsInline
         preload="auto"
       >
-        <source src="/integracion.mp4" type="video/mp4" />
+        <source src="/presentacion.mp4" type="video/mp4" />
       </video>
 
       {/* Capa oscura */}
@@ -40,28 +40,29 @@ export default function Main1() {
             }`}
           />
 
-          <h2 className="text-sm sm:text-base font-medium">
-            Automatiza <span className="font-bold text-white">sin complicaciones</span>
-          </h2>
+<h2 className="text-sm sm:text-base font-medium">
+  Activa tu red inteligente con <span className="font-bold text-white">GLY-IA</span>
+</h2>
 
-          <p className="text-xs sm:text-sm text-white/80">
-            Nuestra IA <span className="font-bold text-white">GLY-IA</span> analiza tu negocio y te sugiere cómo empezar a optimizar procesos.
-          </p>
+<p className="text-xs sm:text-sm text-white/80">
+  GLY-IA Es una arquitectura modular compuesta por nodos de IA que se conectan con nuestro CRM, inventario, WhatsApp, correo y base de datos para gestionar automáticamente tus leads, consultas y ventas.
+</p>
 
-          <p className="text-xs sm:text-sm text-white/80">
-            Gratis. En segundos. Sin fricción.
-          </p>
+<p className="text-xs sm:text-sm text-white/80">
+  Detecta oportunidades, responde en tiempo real, actualiza stock y nutre relaciones comerciales. Cada nodo opera como un agente especializado, orquestado bajo una sola capa inteligente.
+</p>
 
-          <button
-            onClick={() => {
-              localStorage.removeItem('glyiaChatClosed');
-              setShowLoginModal(true);
-            }}
-            className="relative mt-2 px-6 py-3 text-sm font-semibold bg-white text-black rounded-xl shadow-xl group overflow-hidden transition-all"
-          >
-            <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-            <span className="relative z-10">Explora con GLY-IA</span>
-          </button>
+<button
+  onClick={() => {
+    localStorage.removeItem('glyiaChatClosed');
+    setShowLoginModal(true);
+  }}
+  className="relative mt-2 px-6 py-3 text-sm font-semibold bg-white text-black rounded-xl shadow-xl group overflow-hidden transition-all"
+>
+  <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-black/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+  <span className="relative z-10">Conectar con GLY-IA</span>
+</button>
+
         </div>
       </div>
 
