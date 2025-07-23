@@ -39,7 +39,7 @@ export default function ModalInicio({ onComplete }) {
                   lineHeight: '1.3',
                 }}
               >
-                ¡Bienvenido a <span className="text-black">GLY-AI</span>
+                <span className="text-black">GLY SALES AGENTS</span>
               </motion.h2>
 
               <Image
@@ -50,18 +50,20 @@ export default function ModalInicio({ onComplete }) {
                 className="mt-[-8px]"
               />
 
-<p
-  className="text-center text-gray-600 max-w-[70ch]"
-  style={{
-    fontSize: 'clamp(0.75rem, 1.2vw, 1rem)',
-    lineHeight: '1.6',
-  }}
->
-  Soy una inteligencia artificial diseñada para entender los desafíos clave en tu organización y transformar esa información en oportunidades reales de automatización.  
-  <br /><br />
-  Mi misión es auditar tus procesos y ayudarte a construir soluciones basadas en IA que se integren de forma natural con tu operación actual. Junto a GLYNNE, podemos convertir cualquier reto en un sistema escalable y eficiente.
-</p>
-              <div className="pt-4">
+              <p
+                className="text-center text-gray-600 max-w-[70ch]"
+                style={{
+                  fontSize: 'clamp(0.75rem, 1.2vw, 1rem)',
+                  lineHeight: '1.6',
+                }}
+              >
+                <strong>GLY SALES AGENTS</strong> no es un CRM más.  
+                Es una red de agentes inteligentes que automatizan ventas, leads e inventario conectando tus plataformas actuales con lógica de negocio real.
+                <br /><br />
+                Descubre en minutos cómo podrías <strong>vender más y operar mejor</strong>. Sin fricción. Sin codificar.
+              </p>
+
+              <div className="pt-4 flex flex-col items-center">
                 <motion.button
                   whileTap={{ scale: 0.97 }}
                   whileHover={{ scale: 1.03 }}
@@ -71,6 +73,15 @@ export default function ModalInicio({ onComplete }) {
                 >
                   Comenzar Análisis
                 </motion.button>
+
+                <a
+                  href="https://gly-ai-arq.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-xs text-gray-500 hover:text-gray-700 transition underline"
+                >
+                  Consulta GLY_AI para auditar tus procesos
+                </a>
               </div>
             </div>
           </motion.div>
