@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBuilding, FaUserTie } from 'react-icons/fa';
+import { FaUserTie } from 'react-icons/fa';
 import Image from 'next/image';
 
 const roles = [
@@ -13,13 +13,12 @@ const roles = [
 
 export default function ModalInicio({ onComplete }) {
   const [showModal, setShowModal] = useState(true);
-  const [nombreEmpresa, setNombreEmpresa] = useState('');
   const [rol, setRol] = useState('');
 
   const handleClose = () => {
-    if (nombreEmpresa.trim() && rol) {
+    if (rol) {
       setShowModal(false);
-      onComplete?.({ nombreEmpresa, rol });
+      onComplete?.({ rol });
     }
   };
 
@@ -50,7 +49,7 @@ export default function ModalInicio({ onComplete }) {
                   lineHeight: '1.3',
                 }}
               >
-                ¡Hola!  soy <span className="text-black">Tu Asesor de Estrategia IA</span>
+                ¡Hola! Soy <span className="text-black">Tu Asesor de Estrategia IA</span>
               </motion.h2>
 
               <Image
@@ -61,35 +60,24 @@ export default function ModalInicio({ onComplete }) {
                 className="mt-[-8px]"
               />
 
-              <p
-                className="text-center text-gray-600 max-w-[70ch]"
-                style={{
-                  fontSize: 'clamp(0.75rem, 1.2vw, 1rem)',
-                  lineHeight: '1.6',
-                }}
-              >
-                Estoy aquí para ayudarte a construir una <strong>auditoría inteligente</strong> de tu empresa. Juntos diseñaremos una <strong>estrategia de automatización</strong> evaluando procesos clave, integraciones necesarias y oportunidades únicas para tu <strong>transformación digital</strong>.
-              </p>
+<p
+  className="text-center text-gray-600 max-w-[70ch]"
+  style={{
+    fontSize: 'clamp(0.75rem, 1.2vw, 1rem)',
+    lineHeight: '1.6',
+  }}
+>
+  Estás a punto de iniciar tu experiencia con <strong>GLY_SALES_AGENTS</strong>,  
+  nuestro sistema inteligente de automatización de ventas.  
 
-              <div className="w-full max-w-xl space-y-2">
-                <label
-                  className="block font-semibold text-gray-500"
-                  style={{ fontSize: 'clamp(0.7rem, 1vw, 0.9rem)' }}
-                >
-                  Nombre de la empresa
-                </label>
-                <div className="flex items-center border border-gray-300 rounded-full bg-gray-50 px-4 py-2">
-                  <FaBuilding className="text-gray-400 mr-2" />
-                  <input
-                    type="text"
-                    value={nombreEmpresa}
-                    onChange={(e) => setNombreEmpresa(e.target.value)}
-                    className="w-full bg-transparent outline-none"
-                    style={{ fontSize: 'clamp(0.75rem, 1vw, 1rem)' }}
-                    placeholder="Ej: GLYNNE S.A.S"
-                  />
-                </div>
-              </div>
+  <br /><br />
+  Para que la plataforma pueda adaptarse a tus prioridades y mostrarte las funcionalidades  
+  más relevantes, selecciona tu rol dentro de la organización.  
+
+  <br /><br />
+
+</p>
+
 
               <div className="w-full max-w-3xl text-center">
                 <p
@@ -124,11 +112,11 @@ export default function ModalInicio({ onComplete }) {
               <div className="pt-4">
                 <motion.button
                   whileTap={{ scale: 0.97 }}
-                  whileHover={{ scale: nombreEmpresa && rol ? 1.03 : 1 }}
+                  whileHover={{ scale: rol ? 1.03 : 1 }}
                   onClick={handleClose}
-                  disabled={!nombreEmpresa || !rol}
+                  disabled={!rol}
                   className={`px-6 py-3 rounded-full font-semibold text-white transition
-                    ${nombreEmpresa && rol ? 'bg-black hover:bg-gray-900' : 'bg-gray-400 cursor-not-allowed'}`}
+                    ${rol ? 'bg-black hover:bg-gray-900' : 'bg-gray-400 cursor-not-allowed'}`}
                   style={{ fontSize: 'clamp(0.8rem, 1vw, 1rem)' }}
                 >
                   Comenzar Diagnóstico Inteligente
