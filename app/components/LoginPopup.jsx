@@ -15,8 +15,7 @@ export function LoginPopup({ visible, onClose }) {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/GLY_SALES_AGENTS`,
-
+        redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/GLY_SALES_AGENTS`,
       },
     });
 
